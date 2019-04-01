@@ -1,0 +1,35 @@
+{
+  "name": "input-byte",
+  "version": "0.0.1",
+  "description": "A byte-input-type component built with bel and csjs-inject",
+  "main": "src/input-byte.js",
+  "scripts": {
+    "start": "budo demo/demo.js:bundle.js --dir . --title $npm_package_name --force-default-index --ssl --live --open",
+    "build": "browserify demo/demo.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninabreznik/input-string.git"
+  },
+  "keywords": [
+    "byte",
+    "input",
+    "bel",
+    "csjs-inject",
+    "frontend"
+  ],
+  "author": "ninabreznik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ninabreznik/input-byte/issues"
+  },
+  "homepage": "https://github.com/ninabreznik/input-byte#readme",
+  "devDependencies": {
+    "budo": "^11.3.2"
+  },
+  "dependencies": {
+    "bel": "^6.0.0",
+    "csjs-inject": "^1.0.1",
+    "solidity-validator": "^0.1.1"
+  }
+}
