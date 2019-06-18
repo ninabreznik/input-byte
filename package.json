@@ -1,6 +1,6 @@
 {
   "name": "input-byte",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A byte-input-type component built with bel and csjs-inject",
   "main": "src/input-byte.js",
   "scripts": {
@@ -30,6 +30,6 @@
   "dependencies": {
     "bel": "^6.0.0",
     "csjs-inject": "^1.0.1",
-    "solidity-validator": "^0.1.1"
+    "solidity-validator": "^0.2.1"
   }
 }
