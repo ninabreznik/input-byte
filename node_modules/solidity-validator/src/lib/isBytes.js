@@ -1,3 +1,4 @@
+// byte is an alias for bytes1
 const assertString = require('./util/assertString')
 
 module.exports = isBytes

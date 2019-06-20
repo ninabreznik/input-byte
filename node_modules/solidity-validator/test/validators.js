@@ -62,8 +62,16 @@ describe('Validators', () => {
 
     assert.equal(
       validator.getMessage('byte', 'oooooxxxx'),
-      'The value is not a valid byte.'
+      'The value is not a valid bytes.'
     )
+
+    assert.equal(
+      validator.getMessage('bytes1', '0x0111'),
+      'The value is not a valid bytes.'
+    )
+
+    assert.equal(validator.getMessage('byte', '0x01'), '')
+    assert.equal(validator.getMessage('bytes2', '0x0101'), '')
   })
 
   it('get int and uint type range', () => {
