@@ -14,7 +14,15 @@ function isValid(type, value) {
   if (type.search(/\bint/) != -1) return isInt(value, type.substring(3))
   if (type.search(/\bbool/) != -1) return isBoolean(value)
   if (type.search(/\baddress/) != -1) return isAddress(value)
-  if (type.search(/\bbytes/) != -1) return isBytes(value, type.substring(5))
-  if (type.search(/\bbyte/) != -1) return isBytes(value, type.substring(4))
+  if (type.search(/\bbytes/) != -1) {
+    let len = 5
+    let exponent = type.length == len ? 32 : parseInt(type.substring(len))
+    return isBytes(value, exponent)
+  }
+  if (type.search(/\bbyte/) != -1) {
+    let len = 4
+    let exponent = type.length == len ? 1 : parseInt(type.substring(len))
+    return isBytes(value, exponent)
+  }
   return true
 }
